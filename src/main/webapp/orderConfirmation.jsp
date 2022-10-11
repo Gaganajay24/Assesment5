@@ -90,25 +90,8 @@ box-shadow: 2px 1px 21px -9px rgba(0,0,0,0.38);display:flex">
 <div class="formContent">
 <h2><center>Booking Details</center></h2>
 <br><br>
-<%
-OrderDetailsDao od=new OrderDetailsDao();
-String id=od.getTrackerId();
-ResultSet rs=od.getDetails(id);
-rs.next();
-%>
-<table>
-<tr><td>Tracking Id : </td><td><%=rs.getString(1) %></td></tr>
-<tr><td>CustomerId : </td><td><%=rs.getString("customer_id") %></td></tr>
-<tr><td>Pickup : </td><td><%=rs.getString("from_area") %></td></tr>
-<tr><td>Destination : </td><td><%=rs.getString("to_area") %></td></tr>
-<tr><td>Delivery Rate : </td><td><%=rs.getString("price") %></td></tr>
-<tr><td>Ordered Date : </td><td><%=rs.getString("order_date") %></td></tr>
-<tr><td>Delivery Date : </td><td><%=rs.getString("delivery_date") %></td></tr>
 
-</table>
-<br>
-
-<button type="submit" class="loginbutton">Confirm</button>
+<h1>Your Order is Confirmed!!</h1>
 
 </div>
 </div>
